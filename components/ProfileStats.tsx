@@ -77,8 +77,8 @@ export default function ProfileStats({ handle }: ProfileStatsProps) {
       {
         label: 'Visitas',
         data: data?.dailyStats?.map((stat: DailyStat) => stat.visits) || [],
-        backgroundColor: 'rgba(6, 182, 212, 0.6)', // cyan-400 con opacidad
-        borderColor: 'rgb(6, 182, 212)', // cyan-400
+        backgroundColor: 'rgba(6, 182, 212, 0.6)',
+        borderColor: 'rgb(6, 182, 212)',
         borderWidth: 1,
       }
     ],

@@ -12,16 +12,14 @@ export function useProfileVisit(handle: string) {
         referrer: document.referrer || null
       }, { headers });
     },
-    // No necesitamos onSuccess/onError porque esto se ejecuta silenciosamente
   });
 
   useEffect(() => {
     // Registrar la visita cuando se carga el componente
     recordVisit();
 
-    // También podríamos usar un timeout para registrar solo si el usuario
     // permanece un tiempo mínimo en la página
   }, [handle, recordVisit]);
 
-  return null; // Este hook no necesita devolver nada
+  return null;
 }

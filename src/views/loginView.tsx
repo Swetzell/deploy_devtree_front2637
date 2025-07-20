@@ -31,7 +31,7 @@ export default function LoginView() {
       const { data: token } = await api.post(`/auth/login`, formData)
       localStorage.setItem('AUTH_TOKEN', token)
 
-      // Redirigimos al usuario al dashboard
+      // con esto redirigimos al usuario al dashboard
       toast.success('¡Bienvenido! Iniciaste sesión correctamente');
       navigate('/dashboard');
     } catch (error) {

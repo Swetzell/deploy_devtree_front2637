@@ -20,7 +20,7 @@ export default function DashboardView() {
     }
   }, [navigate]);
 
-  // Obtener los datos del perfil
+  // Obtenemos los datos del perfil
   const { data: profile, isLoading: profileLoading } = useQuery({
     queryKey: ['own-profile'],
     queryFn: async () => {
@@ -32,7 +32,7 @@ export default function DashboardView() {
       });
       return data;
     },
-    enabled: !isLoading, // Solo ejecutar si el usuario está autenticado
+    enabled: !isLoading, // Solo se ejecuta si el usuario está autenticado
   });
 
   if (isLoading || profileLoading) {
@@ -60,7 +60,7 @@ export default function DashboardView() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-          {/* Tarjeta de información del perfil */}
+          {/*información del perfil */}
           <div className="bg-slate-100 p-6 rounded-lg">
             <h2 className="text-xl font-bold text-slate-700 mb-4">Mi Perfil</h2>
             <div className="space-y-2">
@@ -87,7 +87,7 @@ export default function DashboardView() {
             </div>
           </div>
 
-          {/* Tarjetas para accesos rápidos */}
+          {/*accesos rápidos */}
           <div className="bg-slate-100 p-6 rounded-lg">
             <h2 className="text-xl font-bold text-slate-700 mb-4">Enlaces Rápidos</h2>
             <div className="grid grid-cols-2 gap-4">
@@ -118,7 +118,7 @@ export default function DashboardView() {
             </div>
           </div>
 
-          {/* Tarjeta para resumen de estadísticas */}
+          {/*resumen de estadísticas */}
           <div className="bg-slate-100 p-6 rounded-lg">
             <h2 className="text-xl font-bold text-slate-700 mb-4">Resumen</h2>
             <div className="space-y-4">
